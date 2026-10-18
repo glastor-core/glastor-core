@@ -92,17 +92,20 @@ glastor-core/
 │   ├── profile/              # Organization-wide showcase README
 │   ├── workflows/            # High-velocity CI/CD, DevSecOps, & Auto-release
 │   ├── CODEOWNERS            # Automated PR review routing
+│   ├── FUNDING.yml           # Sponsorship and community funding channels
 │   ├── dependabot.yml        # Noise-free weekly grouped dependency updates
 │   ├── labeler.yml           # Automated PR path-based labeling rules
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── .editorconfig             # Standardized cross-editor code styling
 ├── .gitattributes            # Deterministic LF line-ending normalization
 ├── .gitignore                # Enterprise-grade secret and artifact exclusion
+├── CITATION.cff              # Citation metadata for academic and industrial attribution
 ├── CODE_OF_CONDUCT.md        # Contributor Covenant v2.1
 ├── CONTRIBUTING.md           # Conventional Commits, Git Flow, and PR guidelines
 ├── LICENSE                   # Apache 2.0 Open Source License
 ├── README.md                 # Project entry point and documentation
-└── SECURITY.md               # Responsible vulnerability disclosure policy
+├── SECURITY.md               # Responsible vulnerability disclosure policy
+└── SUPPORT.md                # Community channels, discussions, and enterprise support
 ```
 
 ---
@@ -116,9 +119,23 @@ We maintain strict zero-trust standards:
 
 ---
 
+## 💬 Discussions & Support
+
+Need assistance or have an architectural idea?
+- Join the community in [GitHub Discussions](https://github.com/orgs/glastor-core/discussions).
+- Review our [Support Guidelines](SUPPORT.md) for enterprise and SLA details.
+
+---
+
 ## 🤝 Contributing
 
 We welcome contributions! Please consult the [Contributing Guide](CONTRIBUTING.md) to learn about our branch standards, commit formatting (`feat:`, `fix:`, etc.), and test coverage expectations.
+
+---
+
+## 📜 Citation
+
+If you use **GLASTOR® Core** in your research or production systems, please cite it using [`CITATION.cff`](CITATION.cff).
 
 ---
 
