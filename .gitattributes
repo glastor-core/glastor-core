@@ -1,0 +1,43 @@
+# Auto detect text files and perform LF normalization on checkout
+* text=auto eol=lf
+
+# Explicitly declare text files you want to always be normalized and converted to native line endings on checkout.
+*.c text
+*.h text
+*.ts text
+*.tsx text
+*.js text
+*.jsx text
+*.json text
+*.yaml text
+*.yml text
+*.md text
+*.html text
+*.css text
+*.toml text
+
+# Declare files that will always have CRLF line endings on checkout
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Denote all files that are truly binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flac binary
+*.ogg binary
+*.wav binary
+*.wasm binary
+*.pdf binary
+*.tar binary
+*.gz binary
+*.zip binary
+
+# GitHub Linguist overrides
+*.min.js linguist-vendored
+*.min.css linguist-vendored

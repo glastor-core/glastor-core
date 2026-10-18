@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/orgs/glastor-core/discussions
+    about: Ask questions, discuss architecture, or brainstorm ideas with the community.
+  - name: 🛡️ Security Advisory
+    url: https://github.com/glastor-core/glastor-core/security/advisories/new
+    about: Report potential vulnerabilities confidentially to the maintainers.

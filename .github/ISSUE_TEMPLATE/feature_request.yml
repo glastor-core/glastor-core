@@ -1,0 +1,54 @@
+name: 💡 Feature Request
+description: Propose a new feature, enhancement, or architecture improvement
+title: "[FEATURE]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an idea to make GLASTOR Core even better!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem or limitation is.
+      placeholder: I am always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the Solution You'd Like
+      description: A clear and concise description of what you want to happen.
+      placeholder: Implement an asynchronous queue engine that...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered.
+      placeholder: We evaluated using external Redis queues, but...
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Subsystem / Area
+      multiple: false
+      options:
+        - Core Engine / Runtime
+        - DevSecOps & Security
+        - CLI & Tooling
+        - Network & Edge API
+        - Documentation
+        - Other
+
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be willing to submit a PR to implement this feature.

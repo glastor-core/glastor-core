@@ -1,0 +1,11 @@
+# Global default code owners for glastor-core
+# These owners will be requested for review when someone opens a pull request.
+
+* @glastor-core/core-maintainers
+
+# Critical infrastructure and workflows
+/.github/ @glastor-core/devops-maintainers
+/scripts/ @glastor-core/devops-maintainers
+
+# Security policies
+/SECURITY.md @glastor-core/security-team

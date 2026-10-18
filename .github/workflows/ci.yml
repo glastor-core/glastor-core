@@ -1,0 +1,64 @@
+name: "CI Pipeline"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-format:
+    name: "Lint & Format Check"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno / Node Environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Check Formatting & Lint
+        run: |
+          if [ -f "deno.json" ] || [ -f "deno.jsonc" ]; then
+            deno fmt --check
+            deno lint
+          elif [ -f "package.json" ]; then
+            npm ci || true
+            npm run lint --if-present
+          else
+            echo "No package or deno configuration found, skipping specific linter."
+          fi
+
+  test:
+    name: "Test Suite"
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Run Tests
+        run: |
+          if [ -f "deno.json" ] || [ -f "deno.jsonc" ]; then
+            deno test -A
+          elif [ -f "package.json" ]; then
+            npm test --if-present
+          else
+            echo "Ready for test suite implementation."
+          fi
