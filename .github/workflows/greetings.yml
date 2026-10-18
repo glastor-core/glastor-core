@@ -1,0 +1,34 @@
+name: "Contributor Greetings"
+
+on:
+  pull_request_target:
+    types: [opened]
+  issues:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome New Contributor
+        uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: >
+            👋 **Welcome to GLASTOR® Core!**
+            
+            Thank you for opening your first issue in this repository. Our maintainers and triagers will review it shortly.
+            Please ensure you have provided all reproduction steps or necessary details to help us triage quickly.
+          pr-message: >
+            🎉 **Thank you for your first pull request to GLASTOR® Core!**
+            
+            We are excited to review your contribution. Please ensure that:
+            - Your commits follow [Conventional Commits](https://www.conventionalcommits.org/).
+            - You have completed all sections of the [Pull Request Template](https://github.com/glastor-core/glastor-core/blob/main/.github/PULL_REQUEST_TEMPLATE.md).
+            - All CI checks and security audits pass.
+            
+            A maintainer will review your changes soon!

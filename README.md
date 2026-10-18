@@ -6,8 +6,10 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
 [![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen.svg?style=for-the-badge)](#)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/glastor-core/glastor-core/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/glastor-core/glastor-core)
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](SECURITY.md)
 [![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-dev/nemesis)
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20In-blueviolet.svg?style=for-the-badge)](https://github.com/orgs/glastor-core/discussions)
 
 <p align="center">
   <a href="#-features">Features</a> •
@@ -15,6 +17,7 @@
   <a href="#-quick-start">Quick Start</a> •
   <a href="#-project-structure">Structure</a> •
   <a href="#-contributing">Contributing</a> •
+  <a href="#-discussions--support">Discussions</a> •
   <a href="#-license">License</a>
 </p>
 

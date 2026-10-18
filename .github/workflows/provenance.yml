@@ -1,0 +1,38 @@
+name: "Build & Provenance Attestation"
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  attestations: write
+
+jobs:
+  build-and-attest:
+    name: "SLSA Provenance Attestation"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Create Distribution Package
+        run: |
+          mkdir -p dist
+          # Bundle release package or binary archive
+          tar --exclude='./.git' --exclude='./dist' -czvf dist/glastor-core-${{ github.ref_name }}.tar.gz .
+          echo "Release archive created at dist/glastor-core-${{ github.ref_name }}.tar.gz"
+
+      - name: Generate SLSA Build Attestation
+        uses: actions/attest-build-provenance@v1
+        with:
+          subject-path: 'dist/glastor-core-*.tar.gz'
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: attested-release
+          path: dist/*
