@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, architecture, or product, please cite it as below."
+title: "GLASTOR Core: Resilient, High-Throughput Core Engine"
+authors:
+  - family-names: "Core Contributors"
+    given-names: "Glastor"
+    organization: "GLASTOR®"
+version: 1.0.0
+date-released: 2026-10-18
+url: "https://github.com/glastor-core/glastor-core"
+repository-code: "https://github.com/glastor-core/glastor-core"
+license: "Apache-2.0"
+keywords:
+  - "distributed-systems"
+  - "resilience"
+  - "high-performance"
+  - "devsecops"
+  - "edge-computing"
