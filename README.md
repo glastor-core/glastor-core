@@ -6,7 +6,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
 [![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen.svg?style=for-the-badge)](#)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/glastor-core/glastor-core/badge?style=for-the-badge)](https://scorecard.dev/viewer/?uri=github.com/glastor-core/glastor-core)
+[![OpenSSF Scorecard](https://img.shields.io/badge/OpenSSF%20Scorecard-Enforced-blue?style=for-the-badge)](https://github.com/glastor-core/glastor-core/actions/workflows/scorecard.yml)
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](SECURITY.md)
 [![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-dev/nemesis)
 [![Discussions](https://img.shields.io/badge/Discussions-Join%20In-blueviolet.svg?style=for-the-badge)](https://github.com/orgs/glastor-core/discussions)
