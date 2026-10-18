@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/glastor-dev/glastor-dev/master/src/schemas/config.json",
+  "projectName": "GLASTOR® Core",
+  "description": "The resilient, high-throughput core engine powering next-generation distributed systems.",
+  "repo": "glastor-core/glastor-core",
+  "repoUrl": "https://github.com/glastor-core/glastor-core",
+  "defaultBranch": "main",
+  "ciWorkflow": "ci.yml",
+  "license": "Apache-2.0",
+  "badgeStyle": "for-the-badge",
+  "contributing": "CONTRIBUTING.md",
+  "exclude": [
+    ".git",
+    "node_modules",
+    "dist",
+    "build"
+  ],
+  "includeExamples": true
+}

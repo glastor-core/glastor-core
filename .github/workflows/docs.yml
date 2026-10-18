@@ -1,0 +1,43 @@
+name: "Documentation & llms.txt Sync"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/**'
+      - 'deno.json'
+      - '.readmegen.json'
+      - 'scripts/generate_docs.ts'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  docs-sync:
+    name: "Sync llms.txt & API Documentation"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Deno Environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Generate Documentation & llms.txt
+        run: |
+          deno task docs
+
+      - name: Commit & Push if Changed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add llms.txt README.generated.md
+          if git diff --staged --quiet; then
+            echo "Documentation and llms.txt are already up to date."
+          else
+            git commit -m "docs(auto): synchronize llms.txt and generated API reference [skip ci]"
+            git push origin main
+          fi

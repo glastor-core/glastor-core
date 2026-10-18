@@ -1,0 +1,20 @@
+# @glastor/core
+
+> The resilient, high-throughput core engine powering next-generation distributed systems.
+
+## Quick Overview
+- Version: 0.1.0
+- License: Apache-2.0
+- Runtime: Deno >= 2.0.0
+- Entrypoint: ./src/mod.ts
+
+## Public API Reference
+- `GlastorConfig` (interface) - GLASTOR Core Engine configuration options.
+- `KernelStatus` (interface) - Kernel status representation.
+- `initGlastorCore(config: GlastorConfig): KernelStatus` - Initializes and starts the GLASTOR Core engine.
+  - Example: ````ts import { initGlastorCore } from "@glastor/core"; const status = initGlastorCore({ appId: "glastor-edge", debug: true }); console.log(`Engine healthy: ${status.healthy}`); ````
+
+## Documentation & Links
+- Repository: https://github.com/glastor-core/glastor-core
+- Documentation: ./book/
+- Full README: ./README.md

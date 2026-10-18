@@ -10,6 +10,7 @@
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](SECURITY.md)
 [![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-dev/nemesis)
 [![Discussions](https://img.shields.io/badge/Discussions-Join%20In-blueviolet.svg?style=for-the-badge)](https://github.com/orgs/glastor-core/discussions)
+[![llms.txt](https://img.shields.io/badge/llms.txt-standard-8A2BE2?style=for-the-badge)](llms.txt)
 
 <p align="center">
   <a href="#-features">Features</a> •
