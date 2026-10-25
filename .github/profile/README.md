@@ -8,7 +8,7 @@
 [![Governance](https://img.shields.io/badge/Governance-Documented-6366f1.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md)
 [![Public Roadmap](https://img.shields.io/badge/Roadmap-Live%20Q4--Q2-f59e0b.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/ROADMAP.md)
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/SECURITY.md)
-[![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-dev/nemesis)
+[![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-core/nemesis)
 
 <p align="center">
   <a href="#-about-glastor-core">About</a> •
@@ -41,7 +41,7 @@ modularity, sub-millisecond throughput, and continuous security compliance.
 | :----------------------------------------------------------------- | :----------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
 | **[`glastor-core`](https://github.com/glastor-core/glastor-core)** | Core engine runtime, stateful pipelines, and modular kernel  | [![Active](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/glastor-core/glastor-core) | [Core Maintainers](https://github.com/glastor-core/.github/blob/main/CODEOWNERS)      |
 | **[`.github`](https://github.com/glastor-core/.github)**           | Organization-wide governance, reusable workflows & standards | [![Standards](https://img.shields.io/badge/Type-Org%20Health-blue)](https://github.com/glastor-core/.github)      | [Steering Committee](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md) |
-| **[`nemesis`](https://github.com/glastor-dev/nemesis)**            | Automated security auditing, policy gatekeeper & scorecards  | [![Audited](https://img.shields.io/badge/Audit-Passed-purple)](https://github.com/glastor-dev/nemesis)            | [Security Team](https://github.com/glastor-core/.github/blob/main/SECURITY.md)        |
+| **[`nemesis`](https://github.com/glastor-core/nemesis)**           | Automated security auditing, policy gatekeeper & scorecards  | [![Audited](https://img.shields.io/badge/Audit-Passed-purple)](https://github.com/glastor-core/nemesis)           | [Security Team](https://github.com/glastor-core/.github/blob/main/SECURITY.md)        |
 
 ---
 
