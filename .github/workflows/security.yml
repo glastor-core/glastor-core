@@ -14,42 +14,31 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
   security-events: write
 
 jobs:
-  secret-scan:
-    name: "TruffleHog Secret Scan"
+  nemesis:
+    name: "Nemesis DevSecOps & Hygiene Gatekeeper"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout Repository (Full History)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: TruffleHog OSS
-        uses: trufflesecurity/trufflehog@main
+      - name: Run Nemesis Universal Auditor
+        uses: glastor-core/nemesis@v1.3.0
         with:
-          path: ./
-          base: ${{ github.event.repository.default_branch }}
-          head: HEAD
-          extra_args: --debug --only-verified
-
-  hygiene-audit:
-    name: "Security & Dependency Hygiene"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Audit Toxic Files & Credentials
-        run: |
-          echo "Scanning for accidental sensitive files..."
-          FORBIDDEN_FILES=(".env" ".env.local" "id_rsa" "*.pem" "*.key")
-          for file in "${FORBIDDEN_FILES[@]}"; do
-            if find . -name "$file" | grep -q .; then
-              echo "::error::Found forbidden sensitive file: $file"
-              exit 1
-            fi
-          done
-          echo "No forbidden sensitive files detected."
+          auto-fix: ${{ github.event_name == 'pull_request' }}
+          pr-suggestions: true
+          fail-on-critical: true
+          scan-secrets: true
+          scan-sast: true
+          scan-sca: true
+          scan-hygiene: true
+          scan-licenses: true
+          generate-sbom: true
+          slack-webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}

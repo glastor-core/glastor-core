@@ -3,41 +3,35 @@ name: "Reusable Security & Supply Chain"
 on:
   workflow_call:
     inputs:
-      scan-severity:
-        description: "Trivy vulnerability severity threshold"
+      auto-fix:
+        description: "Auto-clean toxic files on pull requests"
+        required: false
+        type: boolean
+        default: false
+      fail-on-critical:
+        description: "Fail workflow on critical findings"
+        required: false
+        type: boolean
+        default: true
+      target-path:
+        description: "Directory or repo path to audit"
         required: false
         type: string
-        default: "CRITICAL,HIGH"
+        default: "."
+    secrets:
+      SLACK_WEBHOOK_URL:
+        required: false
+      DISCORD_WEBHOOK_URL:
+        required: false
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
   security-events: write
 
 jobs:
-  trivy-scan:
-    name: "Trivy Vulnerability & Config Scan"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: "fs"
-          ignore-unfixed: true
-          format: "sarif"
-          output: "trivy-results.sarif"
-          severity: ${{ inputs.scan-severity }}
-
-      - name: Upload Trivy Scan Results to GitHub Security Tab
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
-        with:
-          sarif_file: "trivy-results.sarif"
-
-  secret-detection:
-    name: "Gitleaks Secret Audit"
+  nemesis-audit:
+    name: "Nemesis Universal Auditor"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code (Full History)
@@ -45,7 +39,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Gitleaks Action
-        uses: gitleaks/gitleaks-action@v2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run Nemesis DevSecOps Auditor
+        uses: glastor-core/nemesis@v1.3.0
+        with:
+          target-path: ${{ inputs.target-path }}
+          auto-fix: ${{ inputs.auto-fix }}
+          pr-suggestions: true
+          fail-on-critical: ${{ inputs.fail-on-critical }}
+          scan-secrets: true
+          scan-sast: true
+          scan-sca: true
+          scan-hygiene: true
+          scan-licenses: true
+          generate-sbom: true
+          slack-webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          discord-webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}

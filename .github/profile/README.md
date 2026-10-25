@@ -57,8 +57,9 @@ We hold ourselves to rigorous open-source standards:
   Comments process for major architectural designs.
 - **[Branch Rulesets](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md)**: Enforced
   linear history, required reviews, and secret push protection.
-- **[Reusable CI/CD](https://github.com/glastor-core/.github/tree/main/workflows)**: Centralized
-  pipelines for multi-engine verification (Deno 2, Bun, Node 22+) and SLSA supply-chain security.
+- **[Reusable CI/CD](https://github.com/glastor-core/.github/tree/main/.github/workflows)**:
+  Centralized pipelines for multi-engine verification (Deno 2, Bun, Node 22+) and SLSA supply-chain
+  security.
 
 ---
 
