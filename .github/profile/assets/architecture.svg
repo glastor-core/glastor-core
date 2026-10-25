@@ -1,0 +1,313 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 560" width="100%" height="100%"
+  style="background: transparent;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#0d1424" />
+      <stop offset="100%" stop-color="#070a12" />
+    </linearGradient>
+
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+
+    <linearGradient id="edgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#312e81" />
+      <stop offset="100%" stop-color="#4f46e5" />
+    </linearGradient>
+
+    <linearGradient id="secGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <linearGradient id="cliGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+
+    <!-- Filters & Shadows -->
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="coreGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#3b82f6" flood-opacity="0.3" />
+    </filter>
+
+    <!-- Markers for arrows -->
+    <marker id="arrowCore" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6"
+      orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#3b82f6" />
+    </marker>
+    <marker id="arrowEdge" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6"
+      orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#6366f1" />
+    </marker>
+    <marker id="arrowSec" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6"
+      orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrowCli" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6"
+      orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#f59e0b" />
+    </marker>
+  </defs>
+
+  <style>
+  .font-sans {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+      sans-serif;
+  }
+  .title {
+    font-weight: 700;
+    fill: #ffffff;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-weight: 400;
+    fill: #94a3b8;
+    font-size: 13px;
+  }
+  .pill-title {
+    font-weight: 600;
+    fill: #ffffff;
+    font-size: 15px;
+  }
+  .card-title {
+    font-weight: 600;
+    fill: #f8fafc;
+    font-size: 14px;
+  }
+  .bullet {
+    font-weight: 400;
+    fill: #cbd5e1;
+    font-size: 12px;
+  }
+  .tag {
+    font-weight: 500;
+    font-size: 11px;
+    fill: #94a3b8;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  </style>
+
+  <!-- Canvas Container -->
+  <rect x="15" y="15" width="1070" height="530" rx="20" fill="url(#bgGradient)" stroke="#1e293b"
+    stroke-width="1.5" filter="url(#cardGlow)" />
+
+  <!-- Subtle Grid Accent -->
+  <g opacity="0.12" stroke="#38bdf8" stroke-width="0.5">
+    <path d="M 15 80 L 1085 80 M 15 180 L 1085 180 M 15 300 L 1085 300 M 15 420 L 1085 420"
+      stroke-dasharray="4 8" />
+    <path d="M 200 15 L 200 545 M 550 15 L 550 545 M 900 15 L 900 545" stroke-dasharray="4 8" />
+  </g>
+
+  <!-- Diagram Header Badge -->
+  <g transform="translate(45, 45)">
+    <rect x="0" y="0" width="220" height="26" rx="6" fill="#1e293b" stroke="#334155"
+      stroke-width="1" />
+    <circle cx="14" cy="13" r="4" fill="#10b981" />
+    <text x="26" y="17" class="font-sans tag" fill="#94a3b8">ARCHITECTURE ECOSYSTEM</text>
+  </g>
+
+  <!-- ==================== ROOT: GLASTOR CORE ==================== -->
+  <g transform="translate(380, 50)" filter="url(#coreGlow)">
+    <!-- Outer Card -->
+    <rect x="0" y="0" width="340" height="76" rx="14" fill="#0f172a" stroke="#3b82f6"
+      stroke-width="2" />
+    <rect x="2" y="2" width="336" height="72" rx="12" fill="url(#coreGrad)" opacity="0.15" />
+
+    <!-- Globe Icon -->
+    <g transform="translate(24, 20)">
+      <circle cx="18" cy="18" r="18" fill="#1e3a8a" stroke="#3b82f6" stroke-width="1.5" />
+      <!-- Globe Lines -->
+      <circle cx="18" cy="18" r="12" fill="none" stroke="#60a5fa" stroke-width="1.2" />
+      <ellipse cx="18" cy="18" rx="6" ry="12" fill="none" stroke="#60a5fa" stroke-width="1.2" />
+      <line x1="6" y1="18" x2="30" y2="18" stroke="#60a5fa" stroke-width="1.2" />
+    </g>
+
+    <!-- Text -->
+    <text x="76" y="34" class="font-sans title" font-size="18">GLASTOR® Core</text>
+    <text x="76" y="54"
+      class="font-sans subtitle">Resilient Kernel &amp; Distributed Foundations</text>
+  </g>
+
+  <!-- Connector Lines from Root to Pillars -->
+  <!-- Left Pillar -->
+  <path d="M 450 126 L 450 170 L 210 170 L 210 200" fill="none" stroke="#3b82f6" stroke-width="2"
+    stroke-linejoin="round" marker-end="url(#arrowCore)" />
+  <!-- Center Pillar -->
+  <path d="M 550 126 L 550 200" fill="none" stroke="#3b82f6" stroke-width="2"
+    stroke-linejoin="round" marker-end="url(#arrowCore)" />
+  <!-- Right Pillar -->
+  <path d="M 650 126 L 650 170 L 890 170 L 890 200" fill="none" stroke="#3b82f6" stroke-width="2"
+    stroke-linejoin="round" marker-end="url(#arrowCore)" />
+
+  <!-- ==================== PILLAR 1: EDGE ENGINE ==================== -->
+  <g transform="translate(50, 205)">
+    <!-- Main Card -->
+    <rect x="0" y="0" width="320" height="80" rx="12" fill="#0f172a" stroke="#6366f1"
+      stroke-width="1.8" filter="url(#cardGlow)" />
+    <rect x="2" y="2" width="316" height="76" rx="10" fill="url(#edgeGrad)" opacity="0.12" />
+
+    <!-- Lightning Icon -->
+    <g transform="translate(18, 18)">
+      <circle cx="22" cy="22" r="20" fill="#312e81" stroke="#6366f1" stroke-width="1.2" />
+      <path d="M 23 11 L 14 23 L 21 23 L 19 33 L 30 19 L 23 19 Z" fill="#818cf8" />
+    </g>
+
+    <text x="72" y="36" class="font-sans pill-title">Edge Engine &amp; Services</text>
+    <text x="72" y="55" class="font-sans subtitle"
+      font-size="12">Stateful streaming pipelines</text>
+
+    <!-- Downward Arrow -->
+    <path d="M 160 80 L 160 115" fill="none" stroke="#6366f1" stroke-width="1.8"
+      marker-end="url(#arrowEdge)" />
+
+    <!-- Outcome Leaf Card -->
+    <g transform="translate(0, 120)">
+      <rect x="0" y="0" width="320" height="170" rx="12" fill="#131b2e" stroke="#334155"
+        stroke-width="1" />
+      <rect x="0" y="0" width="320" height="38" rx="12" fill="#1e293b" />
+      <rect x="0" y="26" width="320" height="12" fill="#1e293b" />
+      <line x1="0" y1="38" x2="320" y2="38" stroke="#334155" stroke-width="1" />
+
+      <!-- Header -->
+      <circle cx="20" cy="19" r="4" fill="#818cf8" />
+      <text x="34" y="24" class="font-sans card-title"
+        font-size="13">Sub-millisecond Latency &amp; Streaming</text>
+
+      <!-- Details -->
+      <g transform="translate(20, 62)">
+        <circle cx="4" cy="0" r="2.5" fill="#6366f1" />
+        <text x="16" y="4" class="font-sans bullet">Deterministic Dispatcher &amp; Workers</text>
+
+        <circle cx="4" cy="28" r="2.5" fill="#6366f1" />
+        <text x="16" y="32"
+          class="font-sans bullet">Bulkhead Isolation &amp; Circuit Breakers</text>
+
+        <circle cx="4" cy="56" r="2.5" fill="#6366f1" />
+        <text x="16" y="60" class="font-sans bullet">Ultra-Low Overhead Token Limiting</text>
+
+        <circle cx="4" cy="84" r="2.5" fill="#6366f1" />
+        <text x="16" y="88" class="font-sans bullet">High-Throughput Saga Checkpointing</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 2: DEVSECOPS & GATEWAYS ==================== -->
+  <g transform="translate(390, 205)">
+    <!-- Main Card -->
+    <rect x="0" y="0" width="320" height="80" rx="12" fill="#0f172a" stroke="#10b981"
+      stroke-width="1.8" filter="url(#cardGlow)" />
+    <rect x="2" y="2" width="316" height="76" rx="10" fill="url(#secGrad)" opacity="0.12" />
+
+    <!-- Shield Icon -->
+    <g transform="translate(18, 18)">
+      <circle cx="22" cy="22" r="20" fill="#064e3b" stroke="#10b981" stroke-width="1.2" />
+      <path
+        d="M 22 13 L 13 17 L 13 25 C 13 30.5 16.8 35.6 22 37 C 27.2 35.6 31 30.5 31 25 L 31 17 Z"
+        fill="#34d399" />
+    </g>
+
+    <text x="72" y="36" class="font-sans pill-title">DevSecOps &amp; Gateways</text>
+    <text x="72" y="55" class="font-sans subtitle" font-size="12">Continuous zero-trust audit</text>
+
+    <!-- Downward Arrow -->
+    <path d="M 160 80 L 160 115" fill="none" stroke="#10b981" stroke-width="1.8"
+      marker-end="url(#arrowSec)" />
+
+    <!-- Outcome Leaf Card -->
+    <g transform="translate(0, 120)">
+      <rect x="0" y="0" width="320" height="170" rx="12" fill="#131b2e" stroke="#334155"
+        stroke-width="1" />
+      <rect x="0" y="0" width="320" height="38" rx="12" fill="#1e293b" />
+      <rect x="0" y="26" width="320" height="12" fill="#1e293b" />
+      <line x1="0" y1="38" x2="320" y2="38" stroke="#334155" stroke-width="1" />
+
+      <!-- Header -->
+      <circle cx="20" cy="19" r="4" fill="#34d399" />
+      <text x="34" y="24" class="font-sans card-title"
+        font-size="13">Continuous Audit &amp; Push Protection</text>
+
+      <!-- Details -->
+      <g transform="translate(20, 62)">
+        <circle cx="4" cy="0" r="2.5" fill="#10b981" />
+        <text x="16" y="4" class="font-sans bullet">Automated Secret Scanning Gateways</text>
+
+        <circle cx="4" cy="28" r="2.5" fill="#10b981" />
+        <text x="16" y="32" class="font-sans bullet">Nemesis Policy Engine &amp; Scorecard</text>
+
+        <circle cx="4" cy="56" r="2.5" fill="#10b981" />
+        <text x="16" y="60" class="font-sans bullet">Strict Branch Rules &amp; Linear History</text>
+
+        <circle cx="4" cy="84" r="2.5" fill="#10b981" />
+        <text x="16" y="88" class="font-sans bullet">Weekly Grouped Hygiene Governance</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 3: LIBRARIES & CLI ==================== -->
+  <g transform="translate(730, 205)">
+    <!-- Main Card -->
+    <rect x="0" y="0" width="320" height="80" rx="12" fill="#0f172a" stroke="#f59e0b"
+      stroke-width="1.8" filter="url(#cardGlow)" />
+    <rect x="2" y="2" width="316" height="76" rx="10" fill="url(#cliGrad)" opacity="0.12" />
+
+    <!-- Cube / Box Icon -->
+    <g transform="translate(18, 18)">
+      <circle cx="22" cy="22" r="20" fill="#78350f" stroke="#f59e0b" stroke-width="1.2" />
+      <path d="M 22 13 L 31 18 L 31 28 L 22 33 L 13 28 L 13 18 Z" fill="none" stroke="#fbbf24"
+        stroke-width="1.5" />
+      <path d="M 22 13 L 22 33 M 13 18 L 22 23 L 31 18" fill="none" stroke="#fbbf24"
+        stroke-width="1.5" />
+    </g>
+
+    <text x="72" y="36" class="font-sans pill-title">High-Performance Tooling</text>
+    <text x="72" y="55" class="font-sans subtitle" font-size="12">Multi-runtime modular CLI</text>
+
+    <!-- Downward Arrow -->
+    <path d="M 160 80 L 160 115" fill="none" stroke="#f59e0b" stroke-width="1.8"
+      marker-end="url(#arrowCli)" />
+
+    <!-- Outcome Leaf Card -->
+    <g transform="translate(0, 120)">
+      <rect x="0" y="0" width="320" height="170" rx="12" fill="#131b2e" stroke="#334155"
+        stroke-width="1" />
+      <rect x="0" y="0" width="320" height="38" rx="12" fill="#1e293b" />
+      <rect x="0" y="26" width="320" height="12" fill="#1e293b" />
+      <line x1="0" y1="38" x2="320" y2="38" stroke="#334155" stroke-width="1" />
+
+      <!-- Header -->
+      <circle cx="20" cy="19" r="4" fill="#fbbf24" />
+      <text x="34" y="24" class="font-sans card-title"
+        font-size="13">Zero-Dependency &amp; Multi-Runtime</text>
+
+      <!-- Details -->
+      <g transform="translate(20, 62)">
+        <circle cx="4" cy="0" r="2.5" fill="#f59e0b" />
+        <text x="16" y="4" class="font-sans bullet">Deno 2 • Bun • Node.js 22+ Parity</text>
+
+        <circle cx="4" cy="28" r="2.5" fill="#f59e0b" />
+        <text x="16" y="32" class="font-sans bullet">Zero-Bloat Standalone Executables</text>
+
+        <circle cx="4" cy="56" r="2.5" fill="#f59e0b" />
+        <text x="16" y="60" class="font-sans bullet">POSIX &amp; Windows Cross-Platform CLI</text>
+
+        <circle cx="4" cy="84" r="2.5" fill="#f59e0b" />
+        <text x="16" y="88"
+          class="font-sans bullet">Deterministic Build &amp; Release Pipeline</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer Branding -->
+  <g transform="translate(550, 520)">
+    <text x="0" y="0" text-anchor="middle" class="font-sans subtitle" font-size="11"
+      fill="#64748b">GLASTOR® Core • Resilient Architecture &amp; Developer Platform Ecosystem</text>
+  </g>
+</svg>

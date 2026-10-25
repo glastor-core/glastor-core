@@ -7,7 +7,7 @@ on:
     branches: [main]
   schedule:
     # Run weekly on Thursdays at 03:00 UTC
-    - cron: '0 3 * * 4'
+    - cron: "0 3 * * 4"
   workflow_dispatch:
 
 concurrency:
@@ -27,7 +27,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['javascript-typescript']
+        language: ["javascript-typescript"]
 
     steps:
       - name: Checkout Repository

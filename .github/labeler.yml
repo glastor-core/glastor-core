@@ -1,20 +1,20 @@
 # Rules for PR auto-labeler based on path diffs
 documentation:
   - changed-files:
-      - any-glob-to-any-file: ['**/*.md', 'docs/**']
+      - any-glob-to-any-file: ["**/*.md", "docs/**"]
 
 ci:
   - changed-files:
-      - any-glob-to-any-file: ['.github/workflows/**']
+      - any-glob-to-any-file: [".github/workflows/**"]
 
 security:
   - changed-files:
-      - any-glob-to-any-file: ['SECURITY.md', '.github/workflows/security*.yml']
+      - any-glob-to-any-file: ["SECURITY.md", ".github/workflows/security*.yml"]
 
 dependencies:
   - changed-files:
-      - any-glob-to-any-file: ['package.json', 'bun.lockb', 'deno.json*', 'Cargo.toml', 'go.mod']
+      - any-glob-to-any-file: ["package.json", "bun.lockb", "deno.json*", "Cargo.toml", "go.mod"]
 
 core:
   - changed-files:
-      - any-glob-to-any-file: ['src/**', 'lib/**']
+      - any-glob-to-any-file: ["src/**", "lib/**"]

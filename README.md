@@ -29,10 +29,14 @@
 ## 🌟 Key Highlights
 
 - **⚡ Blazing Throughput**: Designed for sub-millisecond execution and low memory footprint.
-- **🛡️ Built-in Resilience**: Circuit breaker patterns, bulkhead isolation, and rate-limiting primitives.
-- **🔒 Zero-Trust Security**: Proactive secret scanning, least-privilege token permissions, and automated hygiene audits.
-- **📦 Multi-Runtime Ready**: Engineered with compatibility for modern engines (Deno 2, Bun, Node.js).
-- **🤖 DevSecOps First**: Strict CI/CD pipelines, automated PR triaging, and grouped dependency governance.
+- **🛡️ Built-in Resilience**: Circuit breaker patterns, bulkhead isolation, and rate-limiting
+  primitives.
+- **🔒 Zero-Trust Security**: Proactive secret scanning, least-privilege token permissions, and
+  automated hygiene audits.
+- **📦 Multi-Runtime Ready**: Engineered with compatibility for modern engines (Deno 2, Bun,
+  Node.js).
+- **🤖 DevSecOps First**: Strict CI/CD pipelines, automated PR triaging, and grouped dependency
+  governance.
 
 ---
 
@@ -68,7 +72,9 @@ flowchart TB
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Modern runtime: [Deno 2](https://deno.com/), [Bun](https://bun.sh/), or [Node.js 22+](https://nodejs.org/)
+
+- Modern runtime: [Deno 2](https://deno.com/), [Bun](https://bun.sh/), or
+  [Node.js 22+](https://nodejs.org/)
 - Git 2.40+
 
 ### Installation & Local Setup
@@ -114,8 +120,10 @@ glastor-core/
 ## 🔒 Security & Governance
 
 We maintain strict zero-trust standards:
+
 - **Push Protection**: Activated via GitHub repository security settings.
-- **Branch Rules**: Direct pushes to `main` are disabled; all merges require peer review and green CI checks.
+- **Branch Rules**: Direct pushes to `main` are disabled; all merges require peer review and green
+  CI checks.
 - **Vulnerability Reporting**: See [SECURITY.md](SECURITY.md) for encrypted reporting procedures.
 
 ---
@@ -123,6 +131,7 @@ We maintain strict zero-trust standards:
 ## 💬 Discussions & Support
 
 Need assistance or have an architectural idea?
+
 - Join the community in [GitHub Discussions](https://github.com/orgs/glastor-core/discussions).
 - Review our [Support Guidelines](SUPPORT.md) for enterprise and SLA details.
 
@@ -130,13 +139,15 @@ Need assistance or have an architectural idea?
 
 ## 🤝 Contributing
 
-We welcome contributions! Please consult the [Contributing Guide](CONTRIBUTING.md) to learn about our branch standards, commit formatting (`feat:`, `fix:`, etc.), and test coverage expectations.
+We welcome contributions! Please consult the [Contributing Guide](CONTRIBUTING.md) to learn about
+our branch standards, commit formatting (`feat:`, `fix:`, etc.), and test coverage expectations.
 
 ---
 
 ## 📜 Citation
 
-If you use **GLASTOR® Core** in your research or production systems, please cite it using [`CITATION.cff`](CITATION.cff).
+If you use **GLASTOR® Core** in your research or production systems, please cite it using
+[`CITATION.cff`](CITATION.cff).
 
 ---
 

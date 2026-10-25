@@ -4,10 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'src/**'
-      - 'deno.json'
-      - '.readmegen.json'
-      - 'scripts/generate_docs.ts'
+      - "src/**"
+      - "deno.json"
+      - ".readmegen.json"
+      - "scripts/generate_docs.ts"
   workflow_dispatch:
 
 permissions:

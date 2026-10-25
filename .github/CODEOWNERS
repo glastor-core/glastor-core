@@ -1,11 +1,35 @@
-# Global default code owners for glastor-core
-# These owners will be requested for review when someone opens a pull request.
+# ==============================================================================
+# GLASTOR® CORE - CODEOWNERS CONFIGURATION (Enterprise Governance Standard)
+# Purpose: Define ownership, accountability, mandatory review paths & compliance.
+# Reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# ==============================================================================
 
-* @glastor-core/core-maintainers
+# [ GLOBAL ARCHITECTURAL OWNERSHIP ]
+# Default maintainers for all organizational assets to preserve architectural integrity.
+* @glastor-core/maintainers @glastor-core
 
-# Critical infrastructure and workflows
-/.github/ @glastor-core/devops-maintainers
-/scripts/ @glastor-core/devops-maintainers
+# [ CI/CD & SUPPLY CHAIN SECURITY ]
+# Workflows, GitHub configurations, automation and dependency governance.
+.github/workflows/ @glastor-core/devops @glastor-core
+.github/dependabot.yml @glastor-core/devops @glastor-core
+.github/actions/ @glastor-core/devops @glastor-core
 
-# Security policies
-/SECURITY.md @glastor-core/security-team
+# [ SECURITY, AUDIT & COMPLIANCE ]
+# Security policies, threat modeling, advisories, and hygiene standards.
+SECURITY.md @glastor-core/security @glastor-core
+.github/SECURITY.md @glastor-core/security @glastor-core
+.github/workflows/security.yml @glastor-core/security @glastor-core
+.github/workflows/scorecard.yml @glastor-core/security @glastor-core
+.github/workflows/codeql.yml @glastor-core/security @glastor-core
+
+# [ GOVERNANCE, RFCs & COMMUNITY STANDARDS ]
+# Strategic direction, community conduct, licensing and contributor standards.
+LICENSE @glastor-core/steering @glastor-core
+CITATION.cff @glastor-core/steering @glastor-core
+.github/GOVERNANCE.md @glastor-core/steering @glastor-core
+.github/ROADMAP.md @glastor-core/maintainers @glastor-core
+.github/rfcs/ @glastor-core/maintainers @glastor-core
+.github/CODE_OF_CONDUCT.md @glastor-core/steering @glastor-core
+.github/CONTRIBUTING.md @glastor-core/maintainers @glastor-core
+.github/COMMIT_CONVENTION.md @glastor-core/maintainers @glastor-core
+.github/SUPPORT.md @glastor-core/triage @glastor-core

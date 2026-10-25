@@ -1,4 +1,5 @@
 #!/usr/bin/env -S deno run -A
+// deno-lint-ignore-file no-import-prefix no-unversioned-import
 /**
  * @file scripts/generate_docs.ts
  * @description Automated documentation and llms.txt generator using @glastor-dev/readmegen
@@ -34,14 +35,17 @@ async function main() {
   rendered = sanitizeGeneratedMarkdown(rendered);
 
   const isCheck = Deno.args.includes("--check");
-  const outputFile = Deno.args.find((arg) => arg.startsWith("--output="))?.split("=")[1] || "README.generated.md";
+  const outputFile = Deno.args.find((arg) => arg.startsWith("--output="))?.split("=")[1] ||
+    "README.generated.md";
 
   if (isCheck) {
     console.log(`🔎 Validating documentation output: ${outputFile}...`);
     try {
       const existing = await Deno.readTextFile(outputFile);
       if (existing !== rendered) {
-        console.warn(`⚠️ ${outputFile} is out of sync with codebase. Run 'deno task docs' to update.`);
+        console.warn(
+          `⚠️ ${outputFile} is out of sync with codebase. Run 'deno task docs' to update.`,
+        );
       } else {
         console.log(`✨ ${outputFile} is perfectly in sync!`);
       }

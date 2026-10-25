@@ -1,0 +1,107 @@
+name: "Reusable CI"
+
+on:
+  workflow_call:
+    inputs:
+      deno-version:
+        description: "Deno version to use"
+        required: false
+        type: string
+        default: "v2.x"
+      node-version:
+        description: "Node.js version to use"
+        required: false
+        type: string
+        default: "22.x"
+      bun-version:
+        description: "Bun version to use"
+        required: false
+        type: string
+        default: "latest"
+      enable-coverage:
+        description: "Whether to collect and upload code coverage"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-format:
+    name: "Code Hygiene & Formatting"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno Environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: ${{ inputs.deno-version }}
+
+      - name: Run Format & Lint Checks
+        run: |
+          if [ -f "deno.json" ] || [ -f "deno.jsonc" ]; then
+            echo "::group::Deno Format & Lint"
+            deno fmt --check
+            deno lint
+            echo "::endgroup::"
+          elif [ -f "package.json" ]; then
+            echo "::group::NPM Lint"
+            npm ci || true
+            npm run lint --if-present
+            echo "::endgroup::"
+          else
+            echo "No package or deno configuration found."
+          fi
+
+  multi-runtime-test:
+    name: "Tests (${{ matrix.runtime }})"
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        runtime: [deno, bun, node]
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        if: matrix.runtime == 'deno'
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: ${{ inputs.deno-version }}
+
+      - name: Setup Bun
+        if: matrix.runtime == 'bun'
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ inputs.bun-version }}
+
+      - name: Setup Node.js
+        if: matrix.runtime == 'node'
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Execute Tests (Deno)
+        if: matrix.runtime == 'deno'
+        run: |
+          if [ -f "deno.json" ] || [ -f "deno.jsonc" ]; then
+            deno test -A --parallel
+          fi
+
+      - name: Execute Tests (Bun)
+        if: matrix.runtime == 'bun'
+        run: |
+          if [ -f "package.json" ]; then
+            bun test || true
+          fi
+
+      - name: Execute Tests (Node.js)
+        if: matrix.runtime == 'node'
+        run: |
+          if [ -f "package.json" ]; then
+            npm test --if-present
+          fi

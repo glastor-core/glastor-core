@@ -5,6 +5,9 @@
   "license": "Apache-2.0",
   "exports": "./src/mod.ts",
   "nodeModulesDir": "auto",
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.0"
+  },
   "tasks": {
     "docs": "deno run -A scripts/generate_docs.ts",
     "docs:check": "deno run -A scripts/generate_docs.ts --check",

@@ -7,7 +7,7 @@ on:
     branches: [main]
   schedule:
     # Run every Sunday at 02:00 UTC
-    - cron: '0 2 * * 0'
+    - cron: "0 2 * * 0"
 
 concurrency:
   group: security-${{ github.ref }}
