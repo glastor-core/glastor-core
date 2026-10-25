@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Deno / Node Environment
         uses: denoland/setup-deno@v2
@@ -46,7 +46,7 @@ jobs:
         os: [ubuntu-latest]
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Environment
         uses: denoland/setup-deno@v2
