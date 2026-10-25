@@ -42,30 +42,9 @@
 
 ## 🏛️ Architecture Overview
 
-```mermaid
-flowchart TB
-    subgraph Ingress["🌐 Ingress & API Gateway"]
-        direction TB
-        REQ["Incoming Requests / Events"] --> RL["RateLimiter (Token Bucket)"]
-        RL --> BH["Bulkhead Isolation Pool"]
-    end
-
-    subgraph CoreEngine["⚡ Glastor Core Kernel"]
-        direction TB
-        BH --> ROUTER["Deterministic Dispatcher"]
-        ROUTER --> WORKERS["Async Resilient Workers"]
-        WORKERS --> SAGA["Durable Saga Checkpoint Store"]
-    end
-
-    subgraph Governance["🛡️ DevSecOps & Telemetry"]
-        direction TB
-        AUDIT["Continuous Nemesis Audit"]
-        SECRETS["Secret Scanning Push Protection"]
-        METRICS["Live Telemetry & Diagnostics"]
-    end
-
-    CoreEngine -.-> Governance
-```
+<p align="center">
+  <img src="assets/architecture.svg" alt="GLASTOR® Core Architecture" width="100%" />
+</p>
 
 ---
 
