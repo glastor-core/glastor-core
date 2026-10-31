@@ -101,8 +101,7 @@ We actively foster leadership from within our community:
 ## 🤝 5. Code of Conduct Enforcement
 
 All members must abide by our [Code of Conduct](CODE_OF_CONDUCT.md). Violations are handled
-confidentially by the Security & Governance team via
-[glastor.info@gmail.com](mailto:glastor.info@gmail.com).
+confidentially by the Security & Governance team via [ventas@glastor.es](mailto:ventas@glastor.es).
 
 ---
 

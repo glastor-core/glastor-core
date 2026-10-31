@@ -29,7 +29,8 @@ Instead, please report security issues through one of the following private chan
    only to maintainers.
 
 2. **Direct Security Contact**:
-   - Email: `security@glastor.dev` (or the security contact designated in GitHub org settings)
+   - Email: [`ventas@glastor.es`](mailto:ventas@glastor.es) (official verified `@glastor.es`
+     organization contact)
    - Subject: `[SECURITY ADVISORY] Potential vulnerability in glastor-core`
 
 ### What to Include in Your Report

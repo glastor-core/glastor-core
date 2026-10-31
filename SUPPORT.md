@@ -29,7 +29,7 @@ Please follow our [Security Policy](SECURITY.md):
 
 - Submit a private advisory via
   **[GitHub Private Vulnerability Reporting](https://github.com/glastor-core/glastor-core/security/advisories/new)**.
-- Contact the security maintainers directly at `security@glastor.dev`.
+- Contact the security maintainers directly at [`ventas@glastor.es`](mailto:ventas@glastor.es).
 
 ---
 
@@ -41,7 +41,7 @@ Organizations running mission-critical workloads can request enterprise-grade su
 - Architecture reviews, performance profiling, and capacity planning.
 - Custom module development and LTS security backports.
 
-Inquiries: `support@glastor.dev`
+Inquiries: [`ventas@glastor.es`](mailto:ventas@glastor.es) • [glastor.es](https://glastor.es)
 
 ---
 

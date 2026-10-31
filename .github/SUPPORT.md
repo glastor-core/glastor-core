@@ -28,7 +28,7 @@ Do not report security vulnerabilities publicly:
 
 - Consult our **[Security Policy](SECURITY.md)**.
 - Use GitHub **Private Vulnerability Reporting** or contact
-  [glastor.info@gmail.com](mailto:glastor.info@gmail.com).
+  [ventas@glastor.es](mailto:ventas@glastor.es).
 
 ---
 

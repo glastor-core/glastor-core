@@ -9,7 +9,7 @@ collaboration.
 ## Code of Conduct
 
 All contributors are expected to uphold our [Code of Conduct](CODE_OF_CONDUCT.md). Please report any
-violations to `conduct@glastor.dev`.
+violations to [`ventas@glastor.es`](mailto:ventas@glastor.es).
 
 ---
 

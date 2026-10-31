@@ -5,12 +5,14 @@
 **The resilient, high-throughput core engine powering next-generation distributed systems.**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](LICENSE)
+[![GitHub Developer Program](https://img.shields.io/badge/GitHub-Developer%20Program-181717.svg?style=for-the-badge&logo=github)](https://github.com/glastor-dev)
 [![CI Status](https://img.shields.io/badge/CI-Passing-brightgreen.svg?style=for-the-badge)](https://github.com/glastor-core/glastor-core/actions/workflows/ci.yml)
 [![OpenSSF Scorecard](https://img.shields.io/badge/OpenSSF%20Scorecard-Enforced-blue?style=for-the-badge)](https://github.com/glastor-core/glastor-core/actions/workflows/scorecard.yml)
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](SECURITY.md)
 [![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-core/nemesis)
 [![Discussions](https://img.shields.io/badge/Discussions-Join%20In-blueviolet.svg?style=for-the-badge)](https://github.com/orgs/glastor-core/discussions)
 [![llms.txt](https://img.shields.io/badge/llms.txt-standard-8A2BE2?style=for-the-badge)](llms.txt)
+[![Official Domain](https://img.shields.io/badge/Web-glastor.es-0ea5e9.svg?style=for-the-badge)](https://glastor.es)
 
 <p align="center">
   <a href="#features">Features</a> •
@@ -124,6 +126,9 @@ We maintain strict zero-trust standards:
   CI checks.
 - **Vulnerability Reporting**: See [SECURITY.md](SECURITY.md) for confidential advisory reporting
   procedures.
+- **Engineering Leadership**: Directed by [@glastor-dev](https://github.com/glastor-dev) (**GitHub
+  Developer Program Member**) under the official [glastor.es](https://glastor.es) engineering
+  division.
 - **Organization Governance**: Consult [GOVERNANCE.md](.github/GOVERNANCE.md) for leadership
   structure, team roles, and RFC adoption rules.
 - **Community Standards**: Enforced across all community interactions via
@@ -139,6 +144,8 @@ Need assistance or have an architectural idea?
 
 - Join the community in [GitHub Discussions](https://github.com/orgs/glastor-core/discussions).
 - Review our [Support Guidelines](SUPPORT.md) for community channels and SLA details.
+- For enterprise & commercial inquiries: [`ventas@glastor.es`](mailto:ventas@glastor.es) •
+  [glastor.es](https://glastor.es).
 
 ---
 
@@ -168,5 +175,5 @@ If you use **GLASTOR® Core** in your research or production systems, please cit
 Distributed under the **Apache License 2.0**. See [`LICENSE`](LICENSE) for full details.
 
 <div align="center">
-  <sub>© 2026 GLASTOR®. Built with rigor, precision, and passion.</sub>
+  <sub>© 2026 <a href="https://glastor.es">GLASTOR®</a> • Led by <a href="https://github.com/glastor-dev">@glastor-dev</a> (GitHub Developer Program Member). Built with rigor, precision, and passion.</sub>
 </div>

@@ -39,7 +39,7 @@ Please report vulnerabilities using GitHub's native confidential reporting tool:
 
 If Private Vulnerability Reporting is unavailable:
 
-- **Security Contact:** [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+- **Security Contact:** [ventas@glastor.es](mailto:ventas@glastor.es)
 - **Subject:** `[SECURITY-ALERT] GLASTOR Core - Vulnerability Report`
 
 ---

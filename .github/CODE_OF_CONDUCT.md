@@ -43,7 +43,7 @@ ensures collaboration is predictable, respectful, and focused on technical excel
 
 To report an ethics or conduct violation:
 
-- 📩 **Integrity Channel:** [glastor.info@gmail.com](mailto:glastor.info@gmail.com)
+- 📩 **Integrity Channel:** [ventas@glastor.es](mailto:ventas@glastor.es)
 - **Response SLA:** The maintainers will acknowledge and process reports within **48 to 72 business
   hours** under strict confidentiality.
 

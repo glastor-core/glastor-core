@@ -5,10 +5,12 @@
 **Resilient Architecture, High-Performance Systems & Next-Gen Developer Tooling**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/LICENSE)
+[![GitHub Developer Program](https://img.shields.io/badge/GitHub-Developer%20Program-181717.svg?style=for-the-badge&logo=github)](https://github.com/glastor-dev)
 [![Governance](https://img.shields.io/badge/Governance-Documented-6366f1.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md)
 [![Public Roadmap](https://img.shields.io/badge/Roadmap-Live%20Q4--Q2-f59e0b.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/ROADMAP.md)
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](https://github.com/glastor-core/.github/blob/main/SECURITY.md)
 [![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-core/nemesis)
+[![Official Domain](https://img.shields.io/badge/Web-glastor.es-0ea5e9.svg?style=for-the-badge)](https://glastor.es)
 
 <p align="center">
   <a href="#-about-glastor-core">About</a> •
@@ -49,6 +51,10 @@ modularity, sub-millisecond throughput, and continuous security compliance.
 
 We hold ourselves to rigorous open-source standards:
 
+- **[Engineering Leadership (@glastor-dev)](https://github.com/glastor-dev)**: Founded and
+  architected by a verified **GitHub Developer Program Member**, building enterprise-grade GitHub
+  ecosystem integrations, automated security tooling, and high-throughput runtimes under
+  **[glastor.es](https://glastor.es)** ([`ventas@glastor.es`](mailto:ventas@glastor.es)).
 - **[Governance Model](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md)**:
   Transparent leadership, consensus-seeking RFC decisions, and clear paths to maintainership.
 - **[Public Roadmap](https://github.com/glastor-core/.github/blob/main/ROADMAP.md)**: Track what we
@@ -93,5 +99,5 @@ We welcome systems engineers, performance architects, and contributors of all ba
 ---
 
 <div align="center">
-  <sub>© 2026 GLASTOR®. Built with rigor, precision, and passion.</sub>
+  <sub>© 2026 <a href="https://glastor.es">GLASTOR®</a> • Led by <a href="https://github.com/glastor-dev">@glastor-dev</a> (GitHub Developer Program Member). Built with rigor, precision, and passion.</sub>
 </div>
