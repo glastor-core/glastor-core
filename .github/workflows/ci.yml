@@ -15,11 +15,17 @@ permissions:
 
 jobs:
   lint-and-format:
-    name: "Lint & Format Check"
+    name: "Lint, Format & Vortex AST Impact"
     runs-on: ubuntu-latest
+    outputs:
+      should_run: ${{ steps.vortex.outputs.should-run }}
+      execution_mode: ${{ steps.vortex.outputs.execution-mode }}
+      matrix: ${{ steps.vortex.outputs.matrix }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Deno / Node Environment
         uses: denoland/setup-deno@v2
@@ -38,12 +44,22 @@ jobs:
             echo "No package or deno configuration found, skipping specific linter."
           fi
 
+      - name: Run Vortex AST Predictive CI & LPT Sharding
+        id: vortex
+        uses: glastor-core/vortex@v1
+        with:
+          shards: "2"
+          base-ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || 'HEAD~1' }}
+          head-ref: "HEAD"
+
   test:
-    name: "Test Suite"
-    runs-on: ${{ matrix.os }}
+    name: "Test Suite (${{ matrix.shard_id }}/${{ matrix.shard_total }})"
+    needs: lint-and-format
+    if: needs.lint-and-format.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
     strategy:
-      matrix:
-        os: [ubuntu-latest]
+      fail-fast: false
+      matrix: ${{ fromJson(needs.lint-and-format.outputs.matrix) }}
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -53,10 +69,14 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Run Tests
+      - name: Run Surgical Test Shard
+        shell: bash
+        env:
+          VORTEX_SHARD_FILES: ${{ matrix.test_files }}
         run: |
           if [ -f "deno.json" ] || [ -f "deno.jsonc" ]; then
-            deno test -A
+            read -r -a TEST_FILES <<< "$VORTEX_SHARD_FILES"
+            deno test -A "${TEST_FILES[@]}"
           elif [ -f "package.json" ]; then
             npm test --if-present
           else

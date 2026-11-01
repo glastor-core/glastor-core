@@ -10,6 +10,7 @@
 [![OpenSSF Scorecard](https://img.shields.io/badge/OpenSSF%20Scorecard-Enforced-blue?style=for-the-badge)](https://github.com/glastor-core/glastor-core/actions/workflows/scorecard.yml)
 [![Security Policy](https://img.shields.io/badge/Security-Enforced-emerald.svg?style=for-the-badge)](SECURITY.md)
 [![DevSecOps](https://img.shields.io/badge/DevSecOps-Nemesis%20Audited-purple.svg?style=for-the-badge)](https://github.com/glastor-core/nemesis)
+[![Predictive CI](https://img.shields.io/badge/Predictive%20CI-Vortex%20AST-06b6d4.svg?style=for-the-badge)](https://github.com/glastor-core/vortex)
 [![Discussions](https://img.shields.io/badge/Discussions-Join%20In-blueviolet.svg?style=for-the-badge)](https://github.com/orgs/glastor-core/discussions)
 [![llms.txt](https://img.shields.io/badge/llms.txt-standard-8A2BE2?style=for-the-badge)](llms.txt)
 [![Official Domain](https://img.shields.io/badge/Web-glastor.es-0ea5e9.svg?style=for-the-badge)](https://glastor.es)
