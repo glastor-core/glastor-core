@@ -79,3 +79,7 @@ temp/
 scratch/
 *.tmp
 vortex-report.json
+.specter/
+specter-report.json
+specter-results.sarif
+specter-sbom.cdx.json

@@ -12,10 +12,11 @@ concurrency:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   lint-and-format:
-    name: "Lint, Format & Vortex AST Impact"
+    name: "Lint, Format, Specter & Vortex AST"
     runs-on: ubuntu-latest
     outputs:
       should_run: ${{ steps.vortex.outputs.should-run }}
@@ -43,6 +44,16 @@ jobs:
           else
             echo "No package or deno configuration found, skipping specific linter."
           fi
+
+      - name: Run Specter Polyglot AST API Contract & SemVer Gatekeeper
+        id: specter
+        uses: glastor-core/specter@v1
+        with:
+          head-dir: "."
+          base-ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || 'HEAD~1' }}
+          fail-on-trojan: "true"
+          output-sarif: "specter-results.sarif"
+          output-sbom: "specter-sbom.cdx.json"
 
       - name: Run Vortex AST Predictive CI & LPT Sharding
         id: vortex
