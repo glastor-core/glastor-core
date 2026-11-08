@@ -215,5 +215,5 @@ If you use **GLASTOR® Core** in your research or production systems, please cit
 Distributed under the **Apache License 2.0**. See [`LICENSE`](LICENSE) for full details.
 
 <div align="center">
-  <sub>© 2026 <a href="https://glastor.es">GLASTOR®</a> • Led by <a href="https://github.com/glastor-dev">@glastor-dev</a> (GitHub Developer Program Member). Built with rigor, precision, and passion.</sub>
+  <sub>© 2010–2026 <a href="https://glastor.es">GLASTOR®</a> (INPI Reg. 4559568 & 4559567) • Dual-Hub Operations (Spain & Argentina · Export Invoice Factura E) • Led by <a href="https://github.com/glastor-dev">@glastor-dev</a> (GitHub Developer Program Member).</sub>
 </div>

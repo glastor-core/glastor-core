@@ -131,5 +131,5 @@ We welcome systems engineers, performance architects, and contributors of all ba
 ---
 
 <div align="center">
-  <sub>© 2010–2026 <a href="https://glastor.es">GLASTOR®</a> (INPI Reg. 4559568 & 4559567) • Dual-Hub Operations (Spain & Argentina · Export Invoice Factura E) • Led by <a href="https://github.com/glastor-dev">@glastor-dev</a>.</sub>
+  <sub>© 2010–2026 <a href="https://glastor.es">GLASTOR®</a> (INPI Reg. 4559568 & 4559567) • Dual-Hub Operations (Spain & Argentina · Export Invoice Factura E) • Led by <a href="https://github.com/glastor-dev">@glastor-dev</a> (GitHub Developer Program Member).</sub>
 </div>
