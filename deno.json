@@ -4,6 +4,20 @@
   "description": "The resilient, high-throughput core engine powering next-generation distributed systems.",
   "license": "Apache-2.0",
   "exports": "./src/mod.ts",
+  "publish": {
+    "include": [
+      "src/",
+      "deno.json",
+      "README.md",
+      "LICENSE"
+    ],
+    "exclude": [
+      ".github/",
+      "tests/",
+      "scripts/",
+      "assets/"
+    ]
+  },
   "nodeModulesDir": "auto",
   "imports": {
     "@std/assert": "jsr:@std/assert@^1.0.0"
