@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Create Distribution Package
         run: |
@@ -27,12 +27,12 @@ jobs:
           echo "Release archive created at dist/glastor-core-${{ github.ref_name }}.tar.gz"
 
       - name: Generate SLSA Build Attestation
-        uses: actions/attest-build-provenance@v1
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: "dist/glastor-core-*.tar.gz"
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: attested-release
           path: dist/*
