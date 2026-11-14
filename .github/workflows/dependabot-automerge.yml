@@ -11,3 +11,4 @@ jobs:
   automerge:
     name: Auto-Merge
     uses: glastor-core/.github/.github/workflows/reusable-automerge.yml@main
+
