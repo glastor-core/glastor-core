@@ -24,12 +24,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository (Full History)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Run Nemesis Universal Auditor
-        uses: glastor-core/nemesis@v1.3.0
+        uses: glastor-core/nemesis@v1.4.0
         with:
           auto-fix: ${{ github.event_name == 'pull_request' }}
           pr-suggestions: true
