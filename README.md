@@ -203,7 +203,8 @@ We welcome contributions! Please consult the [Contributing Guide](CONTRIBUTING.m
 our branch standards, commit formatting (`feat:`, `fix:`, etc.), and test coverage expectations.
 Check our [Public Roadmap](.github/ROADMAP.md) for active milestones.
 
-> 🔔 **Stay Updated on Releases**: Click **Watch** (top-right) and select **Custom ➔ Releases** for core runtime releases and architectural RFCs.
+> 🔔 **Stay Updated on Releases**: Click **Watch** (top-right) and select **Custom ➔ Releases** for
+> core runtime releases and architectural RFCs.
 
 ---
 
