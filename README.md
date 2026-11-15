@@ -16,6 +16,12 @@
 [![Discussions](https://img.shields.io/badge/Discussions-Join%20In-blueviolet.svg?style=for-the-badge)](https://github.com/orgs/glastor-core/discussions)
 [![llms.txt](https://img.shields.io/badge/llms.txt-standard-8A2BE2?style=for-the-badge)](llms.txt)
 [![Official Domain](https://img.shields.io/badge/Web-glastor.es-0ea5e9.svg?style=for-the-badge)](https://glastor.es)
+<br>
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/glastor-core/glastor-core)
+[![Watch on GitHub](https://img.shields.io/github/watchers/glastor-core/glastor-core?style=social&label=Watch)](https://github.com/glastor-core/glastor-core/watchers)
+[![Fork on GitHub](https://img.shields.io/github/forks/glastor-core/glastor-core?style=social&label=Fork)](https://github.com/glastor-core/glastor-core/fork)
+[![Star on GitHub](https://img.shields.io/github/stars/glastor-core/glastor-core?style=social)](https://github.com/glastor-core/glastor-core)
+[![Follow @glastor-dev](https://img.shields.io/github/followers/glastor-dev?label=Follow%20%40glastor-dev&style=social)](https://github.com/glastor-dev)
 
 <p align="center">
   <a href="#features">Features</a> •
@@ -196,6 +202,8 @@ Need assistance or have an architectural idea?
 We welcome contributions! Please consult the [Contributing Guide](CONTRIBUTING.md) to learn about
 our branch standards, commit formatting (`feat:`, `fix:`, etc.), and test coverage expectations.
 Check our [Public Roadmap](.github/ROADMAP.md) for active milestones.
+
+> 🔔 **Stay Updated on Releases**: Click **Watch** (top-right) and select **Custom ➔ Releases** for core runtime releases and architectural RFCs.
 
 ---
 
