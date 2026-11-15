@@ -30,12 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code (Full History)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
       - name: Run Nemesis DevSecOps Auditor
-        uses: glastor-core/nemesis@v1.3.0
+        uses: glastor-core/nemesis@v1.4.0
         with:
           target-path: ${{ inputs.target-path }}
           auto-fix: ${{ inputs.auto-fix }}
