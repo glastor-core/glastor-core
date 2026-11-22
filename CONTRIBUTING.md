@@ -12,8 +12,8 @@ provides clear guidelines to ensure smooth, high-signal collaboration.
   any violations to [`founder@glastor.es`](mailto:founder@glastor.es).
 - For security vulnerabilities, **never open a public issue**—follow our
   [Security Policy](https://github.com/glastor-core/.github/blob/main/SECURITY.md).
-- Review our [Governance Model](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md)
-  and [Public Roadmap](https://github.com/glastor-core/.github/blob/main/ROADMAP.md) for project
+- Review our [Governance Model](https://github.com/glastor-core/.github/blob/main/GOVERNANCE.md) and
+  [Public Roadmap](https://github.com/glastor-core/.github/blob/main/ROADMAP.md) for project
   direction and merge authority.
 
 ---
@@ -26,9 +26,9 @@ provides clear guidelines to ensure smooth, high-signal collaboration.
 - **Reporting Bugs:** Open an issue using the repository's bug report template with exact
   reproduction steps, OS/toolchain versions (`rustc --version`, `deno --version`, `node -v`),
   expected vs. actual behavior, and minimal logs.
-- **Large Changes & Architecture Proposals (RFCs):** Before investing time in a major refactor,
-  new public API, or breaking change, open a **GitHub Discussion** or **Feature Request Issue**
-  first to align on design and scope with maintainers.
+- **Large Changes & Architecture Proposals (RFCs):** Before investing time in a major refactor, new
+  public API, or breaking change, open a **GitHub Discussion** or **Feature Request Issue** first to
+  align on design and scope with maintainers.
 
 ---
 
@@ -123,9 +123,9 @@ This drives automated semantic versioning and changelog generation.
 
 ### Breaking Changes
 
-Breaking changes MUST include `BREAKING CHANGE:` in the footer or `!` after the type/scope
-(e.g., `feat(api)!: migrate to stream protocol`). Unmarked breaking API mutations are automatically
-blocked by **Specter**.
+Breaking changes MUST include `BREAKING CHANGE:` in the footer or `!` after the type/scope (e.g.,
+`feat(api)!: migrate to stream protocol`). Unmarked breaking API mutations are automatically blocked
+by **Specter**.
 
 ### Signed Commits & DCO
 
@@ -159,12 +159,13 @@ Every Pull Request is validated automatically by our **GLASTOR® Core** pipeline
 2. **Nemesis (`glastor-core/nemesis`):** DevSecOps posture, secret scanning, and repo hygiene.
 3. **Specter (`glastor-core/specter`):** Zero-compiler AST API contract diff & Trojan Breaking
    Change guard.
-4. **Byte-Gauge (`glastor-core/byte-gauge`):** SIMD binary/Wasm hardening (`checksec`), entropy,
-   and size regression audit (for compiled artifacts).
+4. **Byte-Gauge (`glastor-core/byte-gauge`):** SIMD binary/Wasm hardening (`checksec`), entropy, and
+   size regression audit (for compiled artifacts).
 5. **CodeQL & OpenSSF Scorecard:** Static application security testing (SAST) and supply-chain
    verification.
 
 Ensure also that:
+
 - **Atomic PRs:** One PR solves one discrete responsibility with corresponding tests.
 - **No secrets or credentials:** Never commit `.env`, private keys, or live tokens.
 - **Documentation parity:** Update `README.md`, doc comments, or examples when public APIs change.

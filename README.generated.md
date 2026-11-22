@@ -70,7 +70,7 @@ Kernel status representation.
 - SECURITY.md
 
 ### Standard Library
-- (none)
+- @std/assert
 
 ### Third-party
 - @glastor/core
@@ -81,10 +81,18 @@ Kernel status representation.
 ## CI/CD
 - .github\workflows\ci.yml
 - .github\workflows\codeql.yml
+- .github\workflows\dependabot-automerge.yml
+- .github\workflows\docs.yml
 - .github\workflows\greetings.yml
+- .github\workflows\health.yml
+- .github\workflows\jsr.yml
 - .github\workflows\labeler.yml
+- .github\workflows\project.yml
 - .github\workflows\provenance.yml
 - .github\workflows\release.yml
+- .github\workflows\reusable-ci.yml
+- .github\workflows\reusable-release.yml
+- .github\workflows\reusable-security.yml
 - .github\workflows\scorecard.yml
 - .github\workflows\security.yml
 - .github\workflows\stale.yml
