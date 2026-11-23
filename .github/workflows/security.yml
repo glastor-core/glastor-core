@@ -29,7 +29,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run Nemesis Universal Auditor
-        uses: glastor-core/nemesis@v1.4.0
+        uses: glastor-core/nemesis@v1.5.0
         with:
           auto-fix: ${{ github.event_name == 'pull_request' }}
           pr-suggestions: true
